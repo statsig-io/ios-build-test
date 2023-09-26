@@ -4,21 +4,18 @@ import Statsig
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-    var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
-
-        window?.rootViewController = UIViewController()
-        window?.makeKeyAndVisible()
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         Statsig.start(sdkKey: "client-key") { err in
-            guard let err = err else {
+            if let err = err {
+                print("[Statsig] Error: \(err)")
                 return
             }
 
-            print("[Statsig] Error: \(err)")
+
+            let check = Statsig.checkGate("a_gate")
+            print("[Statsig] a_gate: \(check)")
         }
 
         return true

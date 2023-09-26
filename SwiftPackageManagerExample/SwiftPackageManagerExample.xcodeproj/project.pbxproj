@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5CED97522AC35E3F00614EFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CED97512AC35E3F00614EFC /* AppDelegate.swift */; };
 		5CED97692AC35E4100614EFC /* SwiftPackageManagerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CED97682AC35E4100614EFC /* SwiftPackageManagerExampleTests.swift */; };
+		5CED97882AC3612400614EFC /* Statsig in Frameworks */ = {isa = PBXBuildFile; productRef = 5CED97872AC3612400614EFC /* Statsig */; };
+		5CED978B2AC3630100614EFC /* Statsig in Frameworks */ = {isa = PBXBuildFile; productRef = 5CED978A2AC3630100614EFC /* Statsig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CED97882AC3612400614EFC /* Statsig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CED978B2AC3630100614EFC /* Statsig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 				5CED97502AC35E3F00614EFC /* SwiftPackageManagerExample */,
 				5CED97672AC35E4100614EFC /* SwiftPackageManagerExampleTests */,
 				5CED974F2AC35E3F00614EFC /* Products */,
+				5CED97892AC3630100614EFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +87,13 @@
 			path = SwiftPackageManagerExampleTests;
 			sourceTree = "<group>";
 		};
+		5CED97892AC3630100614EFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,6 +110,9 @@
 			dependencies = (
 			);
 			name = SwiftPackageManagerExample;
+			packageProductDependencies = (
+				5CED97872AC3612400614EFC /* Statsig */,
+			);
 			productName = SwiftPackageManagerExample;
 			productReference = 5CED974E2AC35E3F00614EFC /* SwiftPackageManagerExample.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +131,9 @@
 				5CED97662AC35E4100614EFC /* PBXTargetDependency */,
 			);
 			name = SwiftPackageManagerExampleTests;
+			packageProductDependencies = (
+				5CED978A2AC3630100614EFC /* Statsig */,
+			);
 			productName = SwiftPackageManagerExampleTests;
 			productReference = 5CED97642AC35E4100614EFC /* SwiftPackageManagerExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -148,6 +166,9 @@
 				Base,
 			);
 			mainGroup = 5CED97452AC35E3F00614EFC;
+			packageReferences = (
+				5CED97862AC3612400614EFC /* XCRemoteSwiftPackageReference "ios-sdk" */,
+			);
 			productRefGroup = 5CED974F2AC35E3F00614EFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -442,6 +463,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5CED97862AC3612400614EFC /* XCRemoteSwiftPackageReference "ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/statsig-io/ios-sdk.git";
+			requirement = {
+				branch = "spm-internal-objc-fix";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5CED97872AC3612400614EFC /* Statsig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CED97862AC3612400614EFC /* XCRemoteSwiftPackageReference "ios-sdk" */;
+			productName = Statsig;
+		};
+		5CED978A2AC3630100614EFC /* Statsig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CED97862AC3612400614EFC /* XCRemoteSwiftPackageReference "ios-sdk" */;
+			productName = Statsig;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CED97462AC35E3F00614EFC /* Project object */;
 }

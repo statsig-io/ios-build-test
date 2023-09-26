@@ -3,6 +3,7 @@ import XCTest
 
 @testable import Statsig
 
+
 final class SwiftPackageManagerExampleTests: XCTestCase {
 
     func testStatsig() throws {

@@ -6,7 +6,7 @@ target 'CocoapodsExample' do
   use_frameworks!
 
   # Pods for CocoapodsExample
-  pod 'Statsig'
+  pod 'Statsig', :path => '../../../../statsig-sdks/kong/bridges/ios-bridge/sdk'
 
   target 'CocoapodsExampleTests' do
     inherit! :search_paths

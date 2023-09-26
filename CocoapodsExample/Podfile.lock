@@ -4,15 +4,15 @@ PODS:
   - Statsig/StatsigInternalObjC (1.29.0)
 
 DEPENDENCIES:
-  - Statsig (~> 1.29.0)
+  - Statsig (from `../../../../statsig-sdks/kong/bridges/ios-bridge/sdk`)
 
-SPEC REPOS:
-  trunk:
-    - Statsig
+EXTERNAL SOURCES:
+  Statsig:
+    :path: "../../../../statsig-sdks/kong/bridges/ios-bridge/sdk"
 
 SPEC CHECKSUMS:
   Statsig: 3f1690ba84b71006e4de99af78c9e80a475a22c7
 
-PODFILE CHECKSUM: 923a49af282b3f4a909bc63304e7a5e7226843d0
+PODFILE CHECKSUM: d4908771d533e2648cf98a3f765cc32aa52ca7aa
 
 COCOAPODS: 1.12.1

@@ -469,7 +469,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/statsig-io/ios-sdk.git";
 			requirement = {
-				branch = "spm-internal-objc-fix";
+				branch = main;
 				kind = branch;
 			};
 		};
